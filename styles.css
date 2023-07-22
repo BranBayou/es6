@@ -17,3 +17,7 @@ body {
 .used > div > p {
   padding: 1rem 0;
 }
+
+.used > div > div {
+  padding: 1rem 0;
+}
