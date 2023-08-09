@@ -29,3 +29,26 @@ document.addEventListener('click', function (e) {
     console.log(x); //output 1
   }
 });
+
+function calcAverage(score1, score2, score3) {
+  return (score1 + score2 + score3) / 3;
+}
+
+const scoreTeam1 = calcAverage(25,26,30);
+const scoreTeam2 = calcAverage(51,54,60);
+
+console.log(scoreTeam1, scoreTeam2);
+
+function checkWinner(AvgScoreTeam1, avgScoreTeam2) {
+  if(scoreTeam1 >= 2 * scoreTeam2) {
+      console.log('team1 wins!');
+  }
+  else if(scoreTeam2 >= 2 * scoreTeam1) {
+      console.log('team2 wins!');
+  }
+  else {
+      console.log('No team wins!');
+  }
+}
+
+checkWinner(scoreTeam1, scoreTeam2);
