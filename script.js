@@ -67,3 +67,4 @@ for (let i = 0; i < bills.length; i++) {
     totals.push(tip + bills[i])
 }
 console.log(bills, tips, totals);
+console.log(tip);
