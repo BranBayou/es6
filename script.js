@@ -68,3 +68,19 @@ for (let i = 0; i < bills.length; i++) {
 }
 console.log(bills, tips, totals);
 console.log(tip);
+
+
+const bookings = [];
+
+const createBooking = function (flightNum, numOfPassengers = 80, price = 190) {
+    const booking = {
+        flightNum,
+        numOfPassengers,
+        price
+    }
+    bookings.push(booking);
+    console.log(booking);
+}
+
+createBooking(111);
+createBooking(112, 60, 210)
