@@ -84,3 +84,19 @@ const createBooking = function (flightNum, numOfPassengers = 80, price = 190) {
 
 createBooking(111);
 createBooking(112, 60, 210)
+
+//this keyword
+
+const jonas = {
+  firstName: 'Bran',
+  year: 1991,
+  calcAge: function() {
+    console.log(this);
+    console.log(2037 -this.year);
+  },
+  greet: function() {
+    console(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+}
+jonas.greet();
