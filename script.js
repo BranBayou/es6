@@ -100,3 +100,35 @@ const jonas = {
   },
 }
 jonas.greet();
+
+const gameScore = [97, 80, 60];
+console.log(gameScore);
+
+const [Bran, Gech, Tade] = gameScore;
+console.log(Bran, Gech, Tade);
+
+const restaurant = {
+    name:'Clacico Etaliano',
+    location: 'Liva angilo, Tavanti23, Tavanty, Italy',
+    categories: ['Italian', 'Pizzarian', 'Vegeterian', 'Organic'],
+    startMenu: ['focaccia', 'buruschicca', 'garlic', 'bread', 'salad'],
+    mainMenu: ['pizza', 'pasta', 'resitto'],
+    order: function (starterIndex, mainIndex) {
+        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]]
+    }
+}
+const [first, second] = restaurant.categories;
+console.log(first, second);
+
+restaurant.order(3, 1);
+
+const [starter, mainCourse] = restaurant.order(3, 1);
+console.log(starter, mainCourse);
+
+const nestedArray = [2, 4, [6, 8]];
+console.log(nestedArray);
+const [i, , j] = nestedArray;
+console.log(i, j);
+
+const [x, y,[z, q]] = nestedArray;
+console.log(x, y, z, q);
