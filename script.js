@@ -132,3 +132,21 @@ console.log(i, j);
 
 const [x, y,[z, q]] = nestedArray;
 console.log(x, y, z, q);
+
+//Sperad operator
+
+//Rest operator
+
+function add(...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+      sum = sum += numbers[i];
+  }
+  console.log('The sum is ', sum);    
+}
+add(2, 3);
+add(3, 6, 8);
+add(3, 6, 9, 12);
+
+const arrX = [15, 24, 33, 42];
+add(...arrX);
