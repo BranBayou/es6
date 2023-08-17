@@ -150,3 +150,21 @@ add(3, 6, 9, 12);
 
 const arrX = [15, 24, 33, 42];
 add(...arrX);
+
+// Set
+
+const orderSet = new Set(['Pizza', 'Pasta', 'Ressoto', 'Pizza', 'Pasta']);
+console.log(orderSet);
+console.log(orderSet.add('bread'));
+console.log(orderSet.has('bread'));
+console.log(orderSet.has('Chess'));
+
+for(const order of orderSet)
+    console.log(order);
+
+const staff = ['waiter', 'chef', 'manager', 'waiter', 'chef'];
+const stafUnique = new Set(staff);
+console.log(stafUnique);
+
+const stafUniqueArray = [...new Set(staff)];
+console.log(stafUniqueArray);
