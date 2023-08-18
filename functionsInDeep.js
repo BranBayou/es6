@@ -46,7 +46,7 @@ newPassport(jonas);
 checkIn(flight, jonas);
 
 //Higher order function
-
+//Function accepting call back functions
 const oneWord = function(str) {
   return str.replace(/ /g, '').toLowerCase();
 };
@@ -61,3 +61,15 @@ const transformer = function(str, fn) {
 };
 transformer('JavaScript is the best!', upperFirstWord);
 transformer('JavaScript is the best!', oneWord);
+
+//Functions returing functions
+
+const greet = function(greeting) {
+  return function(name){
+    console.log(`${greeting} ${name}`);
+  }
+}
+greet('Hello')('Bran');
+
+const greetArrowFunction = greeting => name => console.log(`${greeting} ${name}`);
+greet('Hi')('Bran');
