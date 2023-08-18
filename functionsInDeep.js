@@ -73,3 +73,54 @@ greet('Hello')('Bran');
 
 const greetArrowFunction = greeting => name => console.log(`${greeting} ${name}`);
 greet('Hi')('Bran');
+
+// The call and apply method
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`);
+    this.bookings.push({flight: `${this.iataCode} ${flightNum}`, name});
+  }
+};
+lufthansa.book(239, 'Jonas Schmedtmann');
+lufthansa.book(635, 'John Smith');
+console.log(lufthansa);
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+book.call(eurowings, 23, 'Sarah Willians');
+console.log(eurowings);
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'SX',
+  bookings: []
+};
+book.call(swiss, 5833, 'Mary Cooper');
+console.log(swiss);
+
+//Bind method
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookSX = book.bind(swiss);
+
+bookEW(237, 'Steven Williams');
+console.log(eurowings);
+
+// With Event listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function() {
+  console.log(this);
+  this.planes++;
+  console.log(this.planes);
+}
+
+// document.querySelector('.buy').addEventListener('click', lufthansa.planes);
