@@ -30,7 +30,6 @@
 //   saySomething();
 //   // ReferenceErro
 
-
 // Outer/ Global scope: RED
 // var students = [
 //   { id: 14, name: "Kyle" },
@@ -71,5 +70,32 @@
 //   }
 //   getStudentName();
 //   console.log(nextStudent);
-  // "Suzy" -- oops, an accidental-global variable!
-  // This sort of accident almost certain to lead to bugs eventually
+// "Suzy" -- oops, an accidental-global variable!
+// This sort of accident almost certain to lead to bugs eventually
+
+// Shadowing
+
+// var studentName = "Suzy";
+// function printStudent(studentName) {
+//   studentName = studentName.toUpperCase();
+//   console.log(studentName);
+// }
+// printStudent("Frank");
+// // FRANK
+// printStudent(studentName);
+// // SUZY
+// console.log(studentName);
+// // Suzy
+
+
+
+// Unshadowing
+
+var studentName = "Suzy";
+function printStudent(studentName) {
+console.log(studentName);
+console.log(window.studentName);
+}
+printStudent("Frank");
+// "Frank"
+// "Suzy"
