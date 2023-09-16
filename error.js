@@ -87,15 +87,82 @@
 // console.log(studentName);
 // // Suzy
 
-
-
 // Unshadowing
 
-var studentName = "Suzy";
-function printStudent(studentName) {
-console.log(studentName);
-console.log(window.studentName);
-}
-printStudent("Frank");
-// "Frank"
-// "Suzy"
+// var studentName = "Suzy";
+// function printStudent(studentName) {
+// console.log(studentName);
+// console.log(window.studentName);
+// }
+// printStudent("Frank");
+// // "Frank"
+// // "Suzy"
+
+// // Other forms of global scope declarations do not create mirrored global
+// // object properties:
+// var one = 1;
+// let notOne = 2;
+// const notTwo = 3;
+// class notThree {}
+// console.log(window.one);
+// // 1
+// console.log(window.notOne); // undefined
+// console.log(window.notTwo); // undefined
+// console.log(window.notThree); // undefined
+
+// var special = 42;
+// function lookingFor(special) {
+// // The identifier `special` (parameter) in this
+// // scope is shadowed inside keepLooking(), and
+// // is thus inaccessible from that scope.
+// function keepLooking() {
+// var special = 3.141592;
+// console.log(special);
+// console.log(window.special);
+// }
+// keepLooking();
+// }
+// lookingFor(112358132134);
+// // 3.14159
+
+// Not all combinations of declaration shadowing are allowed. let can shadow var , but var cannot shadow let :
+// function something() {
+//   var special = "JavaScript";
+//   {
+//     let special = 42; // totally fine shadowing
+//     // ..
+//   }
+// }
+// function another() {
+//   // ..
+//   {
+//     let special = "JavaScript";
+//     {
+//       var special = "JavaScript";
+//       // ^^^ Syntax Error
+//       // ..
+//     }
+//   }
+// }
+
+// function another() {
+//   // ..
+//   {
+//     let special = "JavaScript";
+//     ajax("https://some.url", function callback() {
+//       // totally fine shadowing
+//       var special = "JavaScript";
+//       // ..
+//     });
+//   }
+// }
+
+// Function Name Scope
+
+var askQuestion = function ofTheTeacher() {
+  console.log(ofTheTeacher);
+};
+askQuestion();
+// function ofTheTeacher()...
+console.log(ofTheTeacher);
+// ReferenceError: ofTheTeacher is not defined
