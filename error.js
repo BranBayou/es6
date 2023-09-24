@@ -159,10 +159,21 @@
 
 // Function Name Scope
 
-var askQuestion = function ofTheTeacher() {
-  console.log(ofTheTeacher);
-};
-askQuestion();
-// function ofTheTeacher()...
-console.log(ofTheTeacher);
-// ReferenceError: ofTheTeacher is not defined
+// var askQuestion = function ofTheTeacher() {
+//   console.log(ofTheTeacher);
+// };
+// askQuestion();
+// // function ofTheTeacher()...
+// console.log(ofTheTeacher);
+// // ReferenceError: ofTheTeacher is not defined
+
+
+// var name = 42;
+// console.log(name, typeof name);
+
+var studentName = "Kyle";
+let studentID = 42;
+function hello() {
+console.log(`Hello, ${ self.studentName }!`);
+}
+self.hello();
