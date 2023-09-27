@@ -171,9 +171,9 @@
 // var name = 42;
 // console.log(name, typeof name);
 
-var studentName = "Kyle";
-let studentID = 42;
-function hello() {
-console.log(`Hello, ${ self.studentName }!`);
-}
-self.hello();
+// var studentName = "Kyle";
+// let studentID = 42;
+// function hello() {
+// console.log(`Hello, ${ self.studentName }!`);
+// }
+// self.hello();
