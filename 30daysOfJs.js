@@ -9,6 +9,29 @@
 
 // Counter
 
+// var expect = function(val) {
+//   return {
+//   toBe: function (otherVal) {
+//     if (val === otherVal) {
+//       return true;
+//     } else {
+//       throw new Error("Not Equal");
+//     }
+//   },
+//   notToBe: function (otherVal) {
+//     if (val !== otherVal) {
+//       return true;
+//     } else {
+//       throw new Error("Equal");
+//     }
+//   },
+// };
+// };
+
+
+//  console.log(expect(5).toBe(5));
+//  console.log(expect(5).notToBe(5)); 
+
 // var createCounter = function(n) {
 //   return function() {
 //       return n++;
@@ -20,26 +43,26 @@
 
 // Counter Two
 
-var createCounter = function (init) {
-  let currentValue = init;
+// var createCounter = function (init) {
+//   let currentValue = init;
 
-  return {
-    increment: function () {
-      currentValue++;
-      return currentValue;
-    },
-    decrement: function () {
-      currentValue--;
-      return currentValue;
-    },
-    reset: function () {
-      currentValue = init;
-      return currentValue;
-    },
-  };
-};
+//   return {
+//     increment() {
+//       currentValue++;
+//       return currentValue;
+//     },
+//     decrement() {
+//       currentValue--;
+//       return currentValue;
+//     },
+//     reset() {
+//       currentValue = init;
+//       return currentValue;
+//     },
+//   };
+// };
 
-const counter = createCounter(5);
-console.log(counter.increment());
-console.log(counter.reset());
-console.log(counter.decrement());
+// const counter = createCounter(5);
+// console.log(counter.increment());
+// console.log(counter.reset());
+// console.log(counter.decrement());
