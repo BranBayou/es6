@@ -66,3 +66,21 @@
 // console.log(counter.increment());
 // console.log(counter.reset());
 // console.log(counter.decrement());
+
+
+// Apply Transform Over Each Element in Array
+
+var map = function(arr, fn) {
+  const transformedArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const transformedElement = fn(arr[i], i);
+    transformedArray.push(transformedElement);
+  }
+
+  return transformedArray;
+};
+const arr = [1, 2, 3, 4, 5];
+const mappingFunction = (element, index) => element * 2;
+const result = map(arr, mappingFunction);
+console.log(result); 
