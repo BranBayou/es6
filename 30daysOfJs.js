@@ -83,7 +83,7 @@
 // const result = map(arr, mappingFunction);
 // console.log(result);
 
-//
+// Filter Elements from Array
 
 var filter = function (arr, fn) {
   const filteredArr = [];
@@ -103,3 +103,24 @@ const isEven = (num) => num % 2 === 0;
 
 const filteredArr = filterArray(arr, isEven);
 console.log(filteredArr); 
+
+
+// Array Reduce Transformation
+
+var reduce = function(nums, fn, init) {
+  // If the array is empty, return the initial value
+if (nums.length === 0) {
+  return init;
+}
+
+// Initialize the accumulator to the initial value
+let result = init;
+
+// Iterate through the array and apply the reducer function
+for (let i = 0; i < nums.length; i++) {
+  result = fn(result, nums[i]);
+}
+
+// Return the final accumulated value
+return result;
+};
