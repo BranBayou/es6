@@ -85,42 +85,42 @@
 
 // Filter Elements from Array
 
-var filter = function (arr, fn) {
-  const filteredArr = [];
+// var filter = function (arr, fn) {
+//   const filteredArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (fn(arr[i], i)) {
-      filteredArr.push(arr[i]);
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (fn(arr[i], i)) {
+//       filteredArr.push(arr[i]);
+//     }
+//   }
 
-  return filteredArr;
-};
+//   return filteredArr;
+// };
 
-console.log(filter([1, 2, 3]));
-const arr = [1, 2, 3, 4, 5, 6];
-const isEven = (num) => num % 2 === 0;
+// console.log(filter([1, 2, 3]));
+// const arr = [1, 2, 3, 4, 5, 6];
+// const isEven = (num) => num % 2 === 0;
 
-const filteredArr = filterArray(arr, isEven);
-console.log(filteredArr); 
+// const filteredArr = filterArray(arr, isEven);
+// console.log(filteredArr); 
 
 
 // Array Reduce Transformation
 
-var reduce = function(nums, fn, init) {
-  // If the array is empty, return the initial value
-if (nums.length === 0) {
-  return init;
-}
+// var reduce = function(nums, fn, init) {
+//   // If the array is empty, return the initial value
+// if (nums.length === 0) {
+//   return init;
+// }
 
-// Initialize the accumulator to the initial value
-let result = init;
+// // Initialize the accumulator to the initial value
+// let result = init;
 
-// Iterate through the array and apply the reducer function
-for (let i = 0; i < nums.length; i++) {
-  result = fn(result, nums[i]);
-}
+// // Iterate through the array and apply the reducer function
+// for (let i = 0; i < nums.length; i++) {
+//   result = fn(result, nums[i]);
+// }
 
-// Return the final accumulated value
-return result;
-};
+// // Return the final accumulated value
+// return result;
+// };
