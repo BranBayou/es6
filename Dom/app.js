@@ -71,4 +71,16 @@ content.classList.remove('success');
 content.classList.add('error');
 content.classList.remove('error');
 
+const pTag = document.querySelectorAll('p');
+pTag.forEach(pa => {
+  if(pa.textContent.includes('error')){
+    pa.classList.add('error');
+  } else if(pa.textContent.includes('success')) {
+    pa.classList.add('success');
+  }
+});
+
 //toggle clssList
+
+content.classList.toggle('success');
+content.classList.toggle('success');
