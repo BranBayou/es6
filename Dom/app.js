@@ -107,14 +107,14 @@
 
 const ul = document.querySelector('ul');
 const button = document.querySelector('button');
-const items = document.querySelectorAll('li');
-items.forEach(item => {
-  item.addEventListener('click', (e) => {
-    // e.target.style.textDecoration = "line-through";
-    console.log("event in li");
-    e.target.remove();
-  })
-});
+// const items = document.querySelectorAll('li');
+// items.forEach(item => {
+//   item.addEventListener('click', (e) => {
+//     // e.target.style.textDecoration = "line-through";
+//     console.log("event in li");
+//     e.target.remove();
+//   })
+// });
 
 button.addEventListener('click', () => {
   // ul.innerHTML += "<li>something new</li>"
@@ -126,7 +126,13 @@ button.addEventListener('click', () => {
 
 // Event Bubbling
 
-ul.addEventListener('click', e => {
-  console.log("event in ul");
-});
+// ul.addEventListener('click', e => {
+//   console.log("event in ul");
+// });
 // Event Delegation
+
+ul.addEventListener('click', e => {
+  if(e.target.tagName === 'LI') {
+    e.target.remove();
+  }
+});
