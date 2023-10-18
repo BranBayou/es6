@@ -105,8 +105,8 @@
 
 // Event Listener 
 
-const ul = document.querySelector('ul');
-const button = document.querySelector('button');
+// const ul = document.querySelector('ul');
+// const button = document.querySelector('button');
 // const items = document.querySelectorAll('li');
 // items.forEach(item => {
 //   item.addEventListener('click', (e) => {
@@ -139,18 +139,18 @@ const button = document.querySelector('button');
 
 //Popup
 
-const buttonClickMe = document.querySelector('button');
-const popup = document.querySelector('.popup-wrapper');
-const close = document.querySelector('.popup-close');
+// const buttonClickMe = document.querySelector('button');
+// const popup = document.querySelector('.popup-wrapper');
+// const close = document.querySelector('.popup-close');
 
-buttonClickMe.addEventListener('click', () => {
-  popup.style.display = 'block';
-});
+// buttonClickMe.addEventListener('click', () => {
+//   popup.style.display = 'block';
+// });
 
-close.addEventListener('click', () => {
-  popup.style.display = 'none';
-});
+// close.addEventListener('click', () => {
+//   popup.style.display = 'none';
+// });
 
-popup.addEventListener('click', () => {
-  popup.style.display = 'none';
-});
+// popup.addEventListener('click', () => {
+//   popup.style.display = 'none';
+// });
