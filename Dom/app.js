@@ -116,23 +116,41 @@ const button = document.querySelector('button');
 //   })
 // });
 
-button.addEventListener('click', () => {
-  // ul.innerHTML += "<li>something new</li>"
-  const li = document.createElement('li');
-  li.textContent = "something new";
-  // ul.appendChild(li);
-  ul.prepend(li);
-});
+// button.addEventListener('click', () => {
+//   // ul.innerHTML += "<li>something new</li>"
+//   const li = document.createElement('li');
+//   li.textContent = "something new";
+//   // ul.appendChild(li);
+//   ul.prepend(li);
+// });
 
-// Event Bubbling
+// // Event Bubbling
+
+// // ul.addEventListener('click', e => {
+// //   console.log("event in ul");
+// // });
+// // Event Delegation
 
 // ul.addEventListener('click', e => {
-//   console.log("event in ul");
+//   if(e.target.tagName === 'LI') {
+//     e.target.remove();
+//   }
 // });
-// Event Delegation
 
-ul.addEventListener('click', e => {
-  if(e.target.tagName === 'LI') {
-    e.target.remove();
-  }
+//Popup
+
+const buttonClickMe = document.querySelector('button');
+const popup = document.querySelector('.popup-wrapper');
+const close = document.querySelector('.popup-close');
+
+buttonClickMe.addEventListener('click', () => {
+  popup.style.display = 'block';
+});
+
+close.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+popup.addEventListener('click', () => {
+  popup.style.display = 'none';
 });
