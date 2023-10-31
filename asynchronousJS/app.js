@@ -9,3 +9,11 @@ function trackUser() {
 }
 
 button.addEventListener('click', trackUser);
+
+// synchronous
+
+const p = document.querySelector('.synch');
+p.textContent = 'My name Bran!';
+alert('Text set');
+p.style.color = 'red';
+
