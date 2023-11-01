@@ -19,10 +19,10 @@ button.addEventListener('click', trackUser);
 
 // asynchronous
 
- const p = document.querySelector('.synch');
- setTimeout(() => {
-  p.textContent = 'My name Bran!';
- }, 5000);
+//  const p = document.querySelector('.synch');
+//  setTimeout(() => {
+//   p.textContent = 'My name Bran!';
+//  }, 5000);
  
- p.style.color = 'red';
+//  p.style.color = 'red';
 
