@@ -62,4 +62,11 @@ let x = 100;
 x &&= 500;
 ampersand.innerHTML = x;
 
+// JavaScript The ||= Operator
+const or = document.querySelector('.or');
+let y = undefined;
+y ||= 5;
+or.innerHTML = y;
+
+
 
