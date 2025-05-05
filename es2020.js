@@ -68,5 +68,10 @@ let y = undefined;
 y ||= 5;
 or.innerHTML = y;
 
+// JavaScript The ??= Operator
+const nullish = document.querySelector('.coalescing');
+let z;
+z ??= 15;
+nullish.innerHTML = z;
 
 
