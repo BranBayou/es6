@@ -44,3 +44,22 @@ function checkOptionalChaining() {
     console.log('Triggered Optional Chaining Operator (?.)');
     pTag3.innerHTML = user?.address?.postal ?? 'Street not found';
 }
+// JavaScript The &&= Operator
+const ampersand = document.querySelector('.ampersand');
+// function updateConfig(config) {
+//     config.timeout &&= 5000;
+//     return config;
+// }
+  
+// const config1 = { timeout: 1000 };
+// updateConfig(config1);
+// console.log(config1.timeout);
+
+// const config2 = { };
+// updateConfig(config2);
+// console.log(config2.timeout);
+let x = 100;
+x &&= 500;
+ampersand.innerHTML = x;
+
+
