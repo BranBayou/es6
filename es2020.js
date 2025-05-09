@@ -75,3 +75,15 @@ z ??= 15;
 nullish.innerHTML = z;
 
 
+function hello(name) {
+  let phrase = `Hello, ${name}!`;
+
+  debugger; 
+
+  say(phrase);
+}
+function say(phrase) {
+  console.log(phrase);
+}
+
+hello('Bran');
