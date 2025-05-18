@@ -1,3 +1,4 @@
+import { grettings } from './es2020module.js';
 //JavaScript String matchAll()
 const text = 'this is a test string and this is another test string';
 const iterator = text.matchAll(/string/g);
@@ -87,3 +88,7 @@ nullish.innerHTML = z;
 // }
 
 // hello('Bran');
+
+// Modules
+
+grettings('Bran');
