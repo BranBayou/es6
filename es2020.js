@@ -92,3 +92,21 @@ nullish.innerHTML = z;
 // Modules
 
 grettings('Bran');
+
+// Promises
+async function mani() {
+    console.log('First');
+    const newPromise = new Promise((res, rej) => {
+        setTimeout( () => {
+            console.log('Second');
+            res();
+        }, 1000);
+    });
+    
+    // Event loop
+    // Call stack
+    // Task queue
+    await newPromise;
+    console.log('Third');
+}
+mani();
