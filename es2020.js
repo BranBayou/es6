@@ -93,7 +93,33 @@ nullish.innerHTML = z;
 
 grettings('Bran');
 
-// Promises
+// Promises example 1
+// async function f() {
+//   return 1;
+// }
+
+// f().then(alert);
+
+// Same as
+// async function f() {
+//   return Promise.resolve(1);
+// }
+
+// f().then(alert);
+
+async function f() {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1000)
+  });
+
+  let result = await promise; // wait until the promise resolves (*)
+
+  alert(result); // "done!"
+}
+
+f();
+// Promises example 2
 async function mani() {
     console.log('First');
     const newPromise = new Promise((res, rej) => {
