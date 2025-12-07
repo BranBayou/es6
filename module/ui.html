@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="module">
+        import { item } from './items.js';
+        console.log(item);
+
+        const data = item;
+
+        function displayOptions() {
+            const optionsList = document.createElement('ul');
+            data.Options.forEach(option => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${option.Alias}: ${option.Name}`;
+                optionsList.appendChild(listItem);
+            });
+            document.body.appendChild(optionsList);
+        }
+        displayOptions();
+
+        function showItemsList() {
+            const itemsList = document.createElement('ul');
+            data.Items.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.Name} Color: ${item.actualcolour} Waistsize: ${item.sizepantswaist} Lenght: ${item.sizepantslength}`;
+                itemsList.appendChild(listItem);
+            })
+            document.body.appendChild(itemsList);
+        }
+        showItemsList();
+    </script>
+</body>
+</html>
